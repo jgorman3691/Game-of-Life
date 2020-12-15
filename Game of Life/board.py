@@ -31,7 +31,7 @@ class Board:
 #         map(lambda x, y: y)
 #         return universe
 #
-#      side = [0 for m in range(height)]
+#      side = [0 for m in range(height)] 
 
    def location(self):
       return self.universe[self.x, self.y]

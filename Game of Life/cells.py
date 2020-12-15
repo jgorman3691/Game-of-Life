@@ -36,8 +36,18 @@ class Cell:
             if self.universe[self.i,self.j] == True:
                self.amount = self.amount + 1
       return self.amount
-   def nextAlive(self, neighbors, status):
-      pass
+   
+   def nextStep(self, amount):
+      self.amount = amount
+      if(self.universe[self.x,self.y] == True):
+         if(self.amount == 2 or self.amount == 3):
+            return self.universe[self.x,self.y] = True
+         else:
+            return self.universe[self.x,self.y] = False
+      elif(self.universe[self.x,self.y] == False):
+         if(self.amount == 3):
+            return self.universe[self.x,self.y] = True
+         else:
+            return self.universe[self.x,self.y] = False
       
-   def nextDead(self, neighbors, status):
-      pass
+      return self.universe[self.x,self.y] = False
